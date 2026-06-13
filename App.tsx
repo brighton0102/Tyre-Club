@@ -1,4 +1,4 @@
-import '../global.css';
+import './global.css';
 
 import { AppNavigator } from '@/app/navigation/AppNavigator';
 import { AppProviders } from '@/app/providers/AppProviders';

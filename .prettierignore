@@ -6,3 +6,5 @@ android
 ios
 .tmp
 src/components/ui
+src/shared/components/atoms
+.rnstorybook/storybook.requires.ts

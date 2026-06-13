@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Box } from '@/shared/components/atoms/box';
+import { colorClasses, spacingClasses } from '@/shared/theme';
 
 type ScreenProps = {
   children: ReactNode;
@@ -11,7 +12,9 @@ type ScreenProps = {
 };
 
 export function Screen({ children, scrollable = false, className }: ScreenProps) {
-  const contentClassName = ['flex-1 p-4', className].filter(Boolean).join(' ');
+  const contentClassName = ['flex-1', spacingClasses.screenPadding, className]
+    .filter(Boolean)
+    .join(' ');
 
   const content = scrollable ? (
     <ScrollView
@@ -26,7 +29,10 @@ export function Screen({ children, scrollable = false, className }: ScreenProps)
   );
 
   return (
-    <SafeAreaView className="flex-1 bg-background-0" edges={['top', 'left', 'right']}>
+    <SafeAreaView
+      className={`flex-1 ${colorClasses.pageBackground}`}
+      edges={['top', 'left', 'right']}
+    >
       {content}
     </SafeAreaView>
   );

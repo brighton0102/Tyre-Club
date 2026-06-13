@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { FontProvider } from '@/app/providers/FontProvider';
 import { GluestackUIProvider } from '@/shared/components/atoms/gluestack-ui-provider';
 
 const queryClient = new QueryClient({
@@ -20,9 +21,11 @@ type AppProvidersProps = {
 export function AppProviders({ children }: AppProvidersProps) {
   return (
     <GluestackUIProvider>
-      <SafeAreaProvider>
-        <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-      </SafeAreaProvider>
+      <FontProvider>
+        <SafeAreaProvider>
+          <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+        </SafeAreaProvider>
+      </FontProvider>
     </GluestackUIProvider>
   );
 }

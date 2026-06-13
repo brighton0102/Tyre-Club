@@ -31,8 +31,18 @@ export function UiExampleScreen() {
     <Screen scrollable>
       <VStack space="lg">
         <VStack space="xs">
-          <AppText variant="title">UI Example</AppText>
+          <AppText variant="display">UI Example</AppText>
           <AppText variant="body">Shared components built on gluestack-ui wrappers.</AppText>
+        </VStack>
+
+        <VStack space="xs">
+          <AppText variant="h1">Heading 1</AppText>
+          <AppText variant="h2">Heading 2</AppText>
+          <AppText variant="h3">Heading 3</AppText>
+          <AppText variant="body">Body text</AppText>
+          <AppText variant="caption">Caption text</AppText>
+          <AppText variant="label">Label text</AppText>
+          <AppText variant="mono">Mono text — VIN123456789</AppText>
         </VStack>
 
         <AppTextInput

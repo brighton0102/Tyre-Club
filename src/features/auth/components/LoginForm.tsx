@@ -2,6 +2,7 @@ import { Controller } from 'react-hook-form';
 
 import { VStack } from '@/shared/components/atoms/vstack';
 import { AppButton, AppText, AppTextInput } from '@/shared/components';
+import { colorClasses } from '@/shared/theme';
 
 import { useLoginForm } from '../hooks/useLoginForm';
 
@@ -43,7 +44,11 @@ export function LoginForm() {
         )}
       />
 
-      {submitError ? <AppText className="text-error-600">{submitError}</AppText> : null}
+      {submitError ? (
+        <AppText variant="caption" className={colorClasses.red}>
+          {submitError}
+        </AppText>
+      ) : null}
 
       <AppButton title="Sign In" onPress={onSubmit} loading={isSubmitting} />
 

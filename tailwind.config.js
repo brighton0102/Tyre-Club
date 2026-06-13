@@ -13,12 +13,21 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|border|text|stroke|fill)-(primary|secondary|tertiary|error|success|warning|info|typography|outline|background|indicator)-(0|50|100|200|300|400|500|600|700|800|900|950|white|gray|black|error|warning|muted|success|info|light|dark|primary)/,
+        /(bg|border|text|stroke|fill)-(yellow|textPrimary|textSecondary|pageBackground|surfacePrimary|red|amber|green|primary|secondary|tertiary|error|success|warning|info|typography|outline|background|indicator)-(0|50|100|200|300|400|500|600|700|800|900|950|white|gray|black|error|warning|muted|success|info|light|dark|primary)/,
     },
   ],
   theme: {
     extend: {
       colors: {
+        // Keep aligned with src/shared/theme/colors.ts
+        yellow: '#F5C800',
+        textPrimary: '#1A1A1A',
+        textSecondary: '#5A5755',
+        pageBackground: '#F0EDE8',
+        surfacePrimary: '#FFFFFF',
+        red: '#D93025',
+        amber: '#C97C00',
+        green: '#1A7A52',
         primary: {
           0: 'rgb(var(--color-primary-0)/<alpha-value>)',
           50: 'rgb(var(--color-primary-50)/<alpha-value>)',
@@ -175,9 +184,10 @@ module.exports = {
         },
       },
       fontFamily: {
+        sans: ['DMSans_400Regular', 'DMSans_500Medium', 'DMSans_600SemiBold', 'DMSans_700Bold'],
+        mono: ['DMMono_400Regular'],
         heading: undefined,
         body: undefined,
-        mono: undefined,
         jakarta: ['var(--font-plus-jakarta-sans)'],
         roboto: ['var(--font-roboto)'],
         code: ['var(--font-source-code-pro)'],
@@ -188,7 +198,34 @@ module.exports = {
         extrablack: '950',
       },
       fontSize: {
+        // Keep aligned with src/shared/theme/typography.ts
+        display: ['28px', { lineHeight: '34px' }],
+        h1: ['22px', { lineHeight: '28px' }],
+        h2: ['18px', { lineHeight: '24px' }],
+        h3: ['15px', { lineHeight: '20px' }],
+        body: ['13px', { lineHeight: '18px' }],
+        caption: ['11px', { lineHeight: '16px' }],
+        label: ['10px', { lineHeight: '14px' }],
+        mono: ['12px', { lineHeight: '16px' }],
         '2xs': '10px',
+      },
+      spacing: {
+        // Keep aligned with src/shared/theme/spacing.ts
+        sp1: 4,
+        sp2: 8,
+        sp3: 12,
+        sp4: 16,
+        sp6: 24,
+        sp8: 32,
+        sp12: 48,
+      },
+      borderRadius: {
+        // Keep aligned with src/shared/theme/radius.ts
+        xs: 4,
+        sm: 8,
+        md: 12,
+        lg: 16,
+        full: 999,
       },
       boxShadow: {
         'hard-1': '-2px 2px 8px 0px rgba(38, 38, 38, 0.20)',

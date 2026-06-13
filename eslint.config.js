@@ -11,7 +11,8 @@ module.exports = defineConfig([
     'node_modules/*',
     'coverage/*',
     '.tmp/*',
-    'src/components/ui/**',
+    'src/shared/components/atoms/**',
+    '.rnstorybook/storybook.requires.ts',
   ]),
 
   expoConfig,

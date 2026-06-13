@@ -1,6 +1,10 @@
 'use client';
 import { vars } from 'nativewind';
 
+import { buildGluestackLightVars } from '@/shared/theme/gluestack';
+
+const brandLightVars = buildGluestackLightVars();
+
 export const config = {
   light: vars({
     '--color-primary-0': '179 179 179',
@@ -153,6 +157,9 @@ export const config = {
     '--color-indicator-primary': '55 55 55',
     '--color-indicator-info': '83 153 236',
     '--color-indicator-error': '185 28 28',
+
+    /* Brand overrides — keep aligned with src/shared/theme/gluestack.ts */
+    ...brandLightVars,
   }),
   dark: vars({
     '--color-primary-0': '166 166 166',

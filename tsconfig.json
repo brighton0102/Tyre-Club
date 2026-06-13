@@ -11,8 +11,13 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts"
+    "nativewind-env.d.ts",
+    "index.storybook.ts",
+    ".rnstorybook/main.ts",
+    ".rnstorybook/preview.tsx",
+    ".rnstorybook/index.ts"
+  ],
+  "exclude": [
+    ".rnstorybook/storybook.requires.ts"
   ]
 }

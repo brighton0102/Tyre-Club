@@ -1,4 +1,5 @@
 import { Button, ButtonSpinner, ButtonText } from '@/shared/components/atoms/button';
+import { colorClasses } from '@/shared/theme';
 
 type AppButtonProps = {
   title: string;
@@ -24,6 +25,9 @@ export function AppButton({
       action={variant === 'primary' ? 'primary' : 'secondary'}
       variant="solid"
       size="md"
+      className={
+        variant === 'secondary' ? `${colorClasses.surfacePrimary} border-textSecondary` : undefined
+      }
     >
       {loading ? <ButtonSpinner /> : <ButtonText>{title}</ButtonText>}
     </Button>

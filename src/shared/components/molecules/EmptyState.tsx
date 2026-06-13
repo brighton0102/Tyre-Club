@@ -1,5 +1,6 @@
 import { Center } from '@/shared/components/atoms/center';
 import { VStack } from '@/shared/components/atoms/vstack';
+import { spacingClasses } from '@/shared/theme';
 
 import { AppText } from './AppText';
 
@@ -10,9 +11,9 @@ type EmptyStateProps = {
 
 export function EmptyState({ title, message }: EmptyStateProps) {
   return (
-    <Center className="flex-1 py-8">
-      <VStack space="sm" className="items-center px-6">
-        <AppText variant="title">{title}</AppText>
+    <Center className={`flex-1 ${spacingClasses.sectionY}`}>
+      <VStack space="sm" className={`items-center ${spacingClasses.sectionX}`}>
+        <AppText variant="h1">{title}</AppText>
         {message ? <AppText variant="body">{message}</AppText> : null}
       </VStack>
     </Center>

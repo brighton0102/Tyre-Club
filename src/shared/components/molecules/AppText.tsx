@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 
 import { Text } from '@/shared/components/atoms/text';
+import { typographyClasses, type TypographyVariant } from '@/shared/theme';
 
-type AppTextVariant = 'body' | 'caption' | 'title';
+type AppTextVariant = TypographyVariant | 'title';
 
 type AppTextProps = {
   variant?: AppTextVariant;
@@ -11,9 +12,8 @@ type AppTextProps = {
 };
 
 const variantClassName: Record<AppTextVariant, string> = {
-  title: 'text-2xl font-bold text-typography-900',
-  body: 'text-base text-typography-700',
-  caption: 'text-sm text-typography-500',
+  ...typographyClasses,
+  title: typographyClasses.h1,
 };
 
 export function AppText({ variant = 'body', children, className }: AppTextProps) {

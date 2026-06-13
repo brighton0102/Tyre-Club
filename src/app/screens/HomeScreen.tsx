@@ -5,6 +5,7 @@ import type { MainStackParamList } from '@/app/navigation/types';
 import { VStack } from '@/shared/components/atoms/vstack';
 import { useAuthStore } from '@/features/auth/hooks/useAuthStore';
 import { AppButton, AppText, Header, Screen } from '@/shared/components';
+import { spacingClasses } from '@/shared/theme';
 
 export function HomeScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<MainStackParamList>>();
@@ -14,8 +15,11 @@ export function HomeScreen() {
   return (
     <Screen>
       <Header title="Home" />
-      <VStack space="md" className="flex-1 items-center justify-center px-6">
-        <AppText variant="title">Welcome{user ? `, ${user.name}` : ''}!</AppText>
+      <VStack
+        space="md"
+        className={`flex-1 items-center justify-center ${spacingClasses.sectionX}`}
+      >
+        <AppText variant="h1">Welcome{user ? `, ${user.name}` : ''}!</AppText>
         <AppText variant="body">You are signed in to Tire Club.</AppText>
       </VStack>
       <VStack space="sm">
