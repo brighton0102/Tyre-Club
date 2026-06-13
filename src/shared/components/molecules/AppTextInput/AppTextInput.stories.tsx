@@ -6,7 +6,7 @@ import { View } from 'react-native';
 import { AppTextInput } from './AppTextInput';
 
 const meta = {
-  title: 'Design System/Atoms/AppTextInput',
+  title: 'Design System/Molecules/AppTextInput',
   component: AppTextInput,
   decorators: [
     (Story) => (

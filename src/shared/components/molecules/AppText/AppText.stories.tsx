@@ -6,7 +6,7 @@ import { VStack } from '@/shared/components/atoms/vstack';
 import { AppText } from './AppText';
 
 const meta = {
-  title: 'Design System/Atoms/AppText',
+  title: 'Design System/Molecules/AppText',
   component: AppText,
   decorators: [
     (Story) => (

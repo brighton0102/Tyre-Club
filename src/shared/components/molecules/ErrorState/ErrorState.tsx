@@ -2,8 +2,8 @@ import { Center } from '@/shared/components/atoms/center';
 import { VStack } from '@/shared/components/atoms/vstack';
 import { spacingClasses } from '@/shared/theme';
 
-import { AppButton } from './AppButton';
-import { AppText } from './AppText';
+import { AppButton } from '../AppButton';
+import { AppText } from '../AppText';
 
 type ErrorStateProps = {
   message: string;

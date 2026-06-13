@@ -4,7 +4,7 @@ import { Card } from '@/shared/components/atoms/card';
 import { VStack } from '@/shared/components/atoms/vstack';
 import { colorClasses, shadowClasses, spacingClasses } from '@/shared/theme';
 
-import { AppText } from './AppText';
+import { AppText } from '../AppText';
 
 type AppCardProps = {
   title?: string;

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { View } from 'react-native';
 
-import { AppButton } from './AppButton';
+import { AppButton } from '../AppButton';
 import { Header } from './Header';
 
 const meta = {

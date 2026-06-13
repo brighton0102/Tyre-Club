@@ -3,7 +3,7 @@ import { Spinner } from '@/shared/components/atoms/spinner';
 import { VStack } from '@/shared/components/atoms/vstack';
 import { spacingClasses } from '@/shared/theme';
 
-import { AppText } from './AppText';
+import { AppText } from '../AppText';
 
 type LoadingStateProps = {
   message?: string;

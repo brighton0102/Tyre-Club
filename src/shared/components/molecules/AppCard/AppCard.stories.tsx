@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { View } from 'react-native';
 
-import { AppText } from './AppText';
+import { AppText } from '../AppText';
 import { AppCard } from './AppCard';
 
 const meta = {
-  title: 'Design System/Atoms/AppCard',
+  title: 'Design System/Molecules/AppCard',
   component: AppCard,
   decorators: [
     (Story) => (

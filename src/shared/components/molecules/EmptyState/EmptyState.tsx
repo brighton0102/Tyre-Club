@@ -2,7 +2,7 @@ import { Center } from '@/shared/components/atoms/center';
 import { VStack } from '@/shared/components/atoms/vstack';
 import { spacingClasses } from '@/shared/theme';
 
-import { AppText } from './AppText';
+import { AppText } from '../AppText';
 
 type EmptyStateProps = {
   title: string;
