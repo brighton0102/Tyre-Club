@@ -1,0 +1,95 @@
+import React, { forwardRef } from 'react';
+import { useHover } from '@gluestack-ui/utils/aria';
+import { useToggleState } from '@react-stately/toggle';
+import { useFormControlContext } from '../../form-control/creator';
+import { mergeRefs } from '@gluestack-ui/utils/common';
+import { Platform } from 'react-native';
+
+export function Switch(StyledSwitch: any) {
+  return forwardRef(
+    (
+      {
+        disabled,
+        isDisabled,
+        isInvalid,
+        defaultValue,
+        onToggle,
+        value,
+        onValueChange,
+        ...props
+      }: any,
+      ref?: any
+    ) => {
+      const formControlContext = useFormControlContext();
+      const combinedProps = { ...formControlContext, ...props };
+      const { id, ...combinedPropsWithoutId } = combinedProps;
+      const inputId = Platform.OS === 'web' ? id : undefined;
+      const styledSwitchProps =
+        Platform.OS === 'web' ? combinedPropsWithoutId : combinedProps;
+      const state = useToggleState({
+        defaultSelected: !(defaultValue === null || defaultValue === undefined)
+          ? defaultValue
+          : !(value === null || value === undefined)
+            ? value
+            : false,
+      });
+
+      const checked = !(value === null || value === undefined)
+        ? value
+        : state.isSelected;
+
+      const _ref = React.useRef(null);
+      const { isHovered } = useHover({}, _ref);
+
+      const mergedRef = mergeRefs([ref, _ref]);
+
+      React.useEffect(() => {
+        if (!inputId) return;
+
+        const inputElement =
+          typeof HTMLInputElement !== 'undefined' &&
+          _ref.current instanceof HTMLInputElement
+            ? _ref.current
+            : _ref.current?.querySelector?.('input');
+
+        if (!inputElement) return;
+
+        inputElement.id = inputId;
+
+        return () => {
+          if (inputElement.id === inputId) {
+            inputElement.removeAttribute('id');
+          }
+        };
+      }, [inputId]);
+
+      return (
+        <StyledSwitch
+          states={{
+            hover: isHovered,
+            disabled: disabled || isDisabled || combinedProps.isDisabled,
+            invalid: isInvalid || combinedProps.isInvalid,
+            checked: value || checked,
+          }}
+          dataSet={{
+            hover: isHovered ? 'true' : 'false',
+            disabled:
+              disabled || isDisabled || combinedProps.isDisabled
+                ? 'true'
+                : 'false',
+            invalid: isInvalid || combinedProps.isInvalid ? 'true' : 'false',
+            checked: value || checked ? 'true' : 'false',
+          }}
+          disabled={disabled || isDisabled || combinedProps.isDisabled}
+          onValueChange={(val: boolean) => {
+            onValueChange && onValueChange(val);
+            onToggle ? onToggle(val) : state.toggle();
+          }}
+          value={value || checked}
+          {...styledSwitchProps}
+          ref={mergedRef}
+        />
+      );
+    }
+  );
+}

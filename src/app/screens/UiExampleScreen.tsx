@@ -1,0 +1,58 @@
+import { useState } from 'react';
+
+import { VStack } from '@/components/ui/vstack';
+import {
+  AppButton,
+  AppCard,
+  AppText,
+  AppTextInput,
+  LoadingState,
+  Screen,
+} from '@/shared/components';
+
+export function UiExampleScreen() {
+  const [name, setName] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleToggleLoading = () => {
+    setIsLoading(true);
+    setTimeout(() => setIsLoading(false), 1500);
+  };
+
+  if (isLoading) {
+    return (
+      <Screen>
+        <LoadingState message="Fetching demo data..." />
+      </Screen>
+    );
+  }
+
+  return (
+    <Screen scrollable>
+      <VStack space="lg">
+        <VStack space="xs">
+          <AppText variant="title">UI Example</AppText>
+          <AppText variant="body">Shared components built on gluestack-ui wrappers.</AppText>
+        </VStack>
+
+        <AppTextInput
+          label="Your name"
+          value={name}
+          onChangeText={setName}
+          placeholder="Enter your name"
+        />
+
+        <AppCard title="Sample Card">
+          <AppText variant="body">
+            {name ? `Hello, ${name}!` : 'Fill in your name above to see a greeting here.'}
+          </AppText>
+        </AppCard>
+
+        <VStack space="sm">
+          <AppButton title="Toggle Loading Demo" onPress={handleToggleLoading} />
+          <AppButton title="Secondary Action" onPress={() => {}} variant="secondary" />
+        </VStack>
+      </VStack>
+    </Screen>
+  );
+}
