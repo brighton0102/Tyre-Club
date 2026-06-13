@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Text } from '@/components/ui/text';
+import { Text } from '@/shared/components/atoms/text';
 
 type AppTextVariant = 'body' | 'caption' | 'title';
 

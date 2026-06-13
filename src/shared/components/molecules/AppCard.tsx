@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { Card } from '@/components/ui/card';
-import { VStack } from '@/components/ui/vstack';
+import { Card } from '@/shared/components/atoms/card';
+import { VStack } from '@/shared/components/atoms/vstack';
 
 import { AppText } from './AppText';
 

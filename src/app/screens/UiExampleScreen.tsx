@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { VStack } from '@/components/ui/vstack';
+import { VStack } from '@/shared/components/atoms/vstack';
 import {
   AppButton,
   AppCard,

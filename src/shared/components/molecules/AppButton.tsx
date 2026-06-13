@@ -1,4 +1,4 @@
-import { Button, ButtonSpinner, ButtonText } from '@/components/ui/button';
+import { Button, ButtonSpinner, ButtonText } from '@/shared/components/atoms/button';
 
 type AppButtonProps = {
   title: string;

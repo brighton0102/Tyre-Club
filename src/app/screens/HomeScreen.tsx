@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import type { MainStackParamList } from '@/app/navigation/types';
-import { VStack } from '@/components/ui/vstack';
+import { VStack } from '@/shared/components/atoms/vstack';
 import { useAuthStore } from '@/features/auth/hooks/useAuthStore';
 import { AppButton, AppText, Header, Screen } from '@/shared/components';
 

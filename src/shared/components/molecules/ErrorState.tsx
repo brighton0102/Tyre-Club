@@ -1,5 +1,5 @@
-import { Center } from '@/components/ui/center';
-import { VStack } from '@/components/ui/vstack';
+import { Center } from '@/shared/components/atoms/center';
+import { VStack } from '@/shared/components/atoms/vstack';
 
 import { AppButton } from './AppButton';
 import { AppText } from './AppText';

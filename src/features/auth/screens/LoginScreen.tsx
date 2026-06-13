@@ -1,4 +1,4 @@
-import { VStack } from '@/components/ui/vstack';
+import { VStack } from '@/shared/components/atoms/vstack';
 import { AppText, Screen } from '@/shared/components';
 
 import { LoginForm } from '../components/LoginForm';

@@ -1,6 +1,6 @@
-import { Center } from '@/components/ui/center';
-import { Spinner } from '@/components/ui/spinner';
-import { VStack } from '@/components/ui/vstack';
+import { Center } from '@/shared/components/atoms/center';
+import { Spinner } from '@/shared/components/atoms/spinner';
+import { VStack } from '@/shared/components/atoms/vstack';
 
 import { AppText } from './AppText';
 

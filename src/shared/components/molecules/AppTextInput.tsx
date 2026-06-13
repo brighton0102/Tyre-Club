@@ -1,8 +1,8 @@
 import { TextInputProps as RNTextInputProps } from 'react-native';
 
-import { Input, InputField } from '@/components/ui/input';
-import { Text } from '@/components/ui/text';
-import { VStack } from '@/components/ui/vstack';
+import { Input, InputField } from '@/shared/components/atoms/input';
+import { Text } from '@/shared/components/atoms/text';
+import { VStack } from '@/shared/components/atoms/vstack';
 
 type AppTextInputProps = RNTextInputProps & {
   label: string;

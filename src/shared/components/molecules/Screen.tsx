@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Box } from '@/components/ui/box';
+import { Box } from '@/shared/components/atoms/box';
 
 type ScreenProps = {
   children: ReactNode;
