@@ -8,8 +8,8 @@ import {
 import { DMMono_400Regular } from '@expo-google-fonts/dm-mono';
 import { ReactNode } from 'react';
 
-import { Center } from '@/shared/components/atoms/center';
-import { Spinner } from '@/shared/components/atoms/spinner';
+import { Center } from '@/shared/components/primitives/center';
+import { Spinner } from '@/shared/components/primitives/spinner';
 
 type FontProviderProps = {
   children: ReactNode;

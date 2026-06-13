@@ -11,7 +11,7 @@ module.exports = defineConfig([
     'node_modules/*',
     'coverage/*',
     '.tmp/*',
-    'src/shared/components/atoms/**',
+    'src/shared/components/primitives/**',
     '.rnstorybook/storybook.requires.ts',
   ]),
 

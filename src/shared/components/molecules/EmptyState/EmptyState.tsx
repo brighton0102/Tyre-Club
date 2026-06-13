@@ -1,8 +1,8 @@
-import { Center } from '@/shared/components/atoms/center';
-import { VStack } from '@/shared/components/atoms/vstack';
+import { Center } from '@/shared/components/primitives/center';
+import { VStack } from '@/shared/components/primitives/vstack';
 import { spacingClasses } from '@/shared/theme';
 
-import { AppText } from '../AppText';
+import { AppText } from '../../atoms/AppText';
 
 type EmptyStateProps = {
   title: string;

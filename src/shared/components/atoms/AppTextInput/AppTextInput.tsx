@@ -1,8 +1,8 @@
 import { TextInputProps as RNTextInputProps } from 'react-native';
 
-import { Input, InputField } from '@/shared/components/atoms/input';
-import { Text } from '@/shared/components/atoms/text';
-import { VStack } from '@/shared/components/atoms/vstack';
+import { Input, InputField } from '@/shared/components/primitives/input';
+import { Text } from '@/shared/components/primitives/text';
+import { VStack } from '@/shared/components/primitives/vstack';
 import { colors, colorClasses, typographyClasses } from '@/shared/theme';
 
 type AppTextInputProps = RNTextInputProps & {

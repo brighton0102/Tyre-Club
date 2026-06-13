@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-import { Card } from '@/shared/components/atoms/card';
-import { VStack } from '@/shared/components/atoms/vstack';
+import { Card } from '@/shared/components/primitives/card';
+import { VStack } from '@/shared/components/primitives/vstack';
 import { colorClasses, shadowClasses, spacingClasses } from '@/shared/theme';
 
-import { AppText } from '../AppText';
+import { AppText } from '../../atoms/AppText';
 
 type AppCardProps = {
   title?: string;

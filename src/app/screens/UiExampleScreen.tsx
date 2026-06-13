@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { VStack } from '@/shared/components/atoms/vstack';
 import {
   AppButton,
   AppCard,
@@ -8,6 +7,7 @@ import {
   AppTextInput,
   LoadingState,
   Screen,
+  Stack,
 } from '@/shared/components';
 
 export function UiExampleScreen() {
@@ -29,13 +29,13 @@ export function UiExampleScreen() {
 
   return (
     <Screen scrollable>
-      <VStack space="lg">
-        <VStack space="xs">
+      <Stack space="lg">
+        <Stack space="xs">
           <AppText variant="display">UI Example</AppText>
           <AppText variant="body">Shared components built on gluestack-ui wrappers.</AppText>
-        </VStack>
+        </Stack>
 
-        <VStack space="xs">
+        <Stack space="xs">
           <AppText variant="h1">Heading 1</AppText>
           <AppText variant="h2">Heading 2</AppText>
           <AppText variant="h3">Heading 3</AppText>
@@ -43,7 +43,7 @@ export function UiExampleScreen() {
           <AppText variant="caption">Caption text</AppText>
           <AppText variant="label">Label text</AppText>
           <AppText variant="mono">Mono text — VIN123456789</AppText>
-        </VStack>
+        </Stack>
 
         <AppTextInput
           label="Your name"
@@ -58,11 +58,11 @@ export function UiExampleScreen() {
           </AppText>
         </AppCard>
 
-        <VStack space="sm">
+        <Stack space="sm">
           <AppButton title="Toggle Loading Demo" onPress={handleToggleLoading} />
           <AppButton title="Secondary Action" onPress={() => {}} variant="secondary" />
-        </VStack>
-      </VStack>
+        </Stack>
+      </Stack>
     </Screen>
   );
 }

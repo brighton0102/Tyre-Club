@@ -1,4 +1,4 @@
-import { Button, ButtonSpinner, ButtonText } from '@/shared/components/atoms/button';
+import { Button, ButtonSpinner, ButtonText } from '@/shared/components/primitives/button';
 import { colorClasses } from '@/shared/theme';
 
 type AppButtonProps = {

@@ -1,7 +1,6 @@
 import { Controller } from 'react-hook-form';
 
-import { VStack } from '@/shared/components/atoms/vstack';
-import { AppButton, AppText, AppTextInput } from '@/shared/components';
+import { AppButton, AppText, AppTextInput, Stack } from '@/shared/components';
 import { colorClasses } from '@/shared/theme';
 
 import { useLoginForm } from '../hooks/useLoginForm';
@@ -10,7 +9,7 @@ export function LoginForm() {
   const { control, errors, isSubmitting, submitError, onSubmit } = useLoginForm();
 
   return (
-    <VStack space="sm">
+    <Stack space="sm">
       <Controller
         control={control}
         name="email"
@@ -55,6 +54,6 @@ export function LoginForm() {
       <AppText variant="caption" className="text-center">
         Demo: use any valid email and a password with 6+ characters.
       </AppText>
-    </VStack>
+    </Stack>
   );
 }

@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { View } from 'react-native';
 
-import { AppButton } from '../AppButton';
-import { Header } from './Header';
+import { AppButton } from '../../atoms/AppButton';
+import { ScreenHeader } from './ScreenHeader';
 
 const meta = {
-  title: 'Design System/Molecules/Header',
-  component: Header,
+  title: 'Design System/Molecules/ScreenHeader',
+  component: ScreenHeader,
   decorators: [
     (Story) => (
       <View className="bg-pageBackground p-sp4">
@@ -17,7 +17,7 @@ const meta = {
   args: {
     title: 'Home',
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof ScreenHeader>;
 
 export default meta;
 

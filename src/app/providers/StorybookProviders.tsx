@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { FontProvider } from '@/app/providers/FontProvider';
-import { GluestackUIProvider } from '@/shared/components/atoms/gluestack-ui-provider';
+import { GluestackUIProvider } from '@/shared/components/primitives/gluestack-ui-provider';
 
 type StorybookProvidersProps = {
   children: ReactNode;

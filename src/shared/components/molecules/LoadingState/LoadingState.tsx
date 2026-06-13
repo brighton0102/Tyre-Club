@@ -1,9 +1,9 @@
-import { Center } from '@/shared/components/atoms/center';
-import { Spinner } from '@/shared/components/atoms/spinner';
-import { VStack } from '@/shared/components/atoms/vstack';
+import { Center } from '@/shared/components/primitives/center';
+import { Spinner } from '@/shared/components/primitives/spinner';
+import { VStack } from '@/shared/components/primitives/vstack';
 import { spacingClasses } from '@/shared/theme';
 
-import { AppText } from '../AppText';
+import { AppText } from '../../atoms/AppText';
 
 type LoadingStateProps = {
   message?: string;

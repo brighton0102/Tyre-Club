@@ -3,18 +3,24 @@ const fs = require('fs');
 const path = require('path');
 
 const pkgPath = path.join(__dirname, '..', 'package.json');
-const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-const originalMain = pkg.main;
 
-function restoreMain() {
+// The normal app entry. Always restore to this so an interrupted run can never
+// leave package.json stuck on the Storybook entry (which crashes `npm start`).
+const APP_ENTRY = 'index.ts';
+const STORYBOOK_ENTRY = 'index.storybook.ts';
+
+function setMain(entry) {
   const current = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-  current.main = originalMain;
+  current.main = entry;
   fs.writeFileSync(pkgPath, `${JSON.stringify(current, null, 2)}\n`);
 }
 
+function restoreMain() {
+  setMain(APP_ENTRY);
+}
+
 function runStorybook() {
-  pkg.main = 'index.storybook.ts';
-  fs.writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`);
+  setMain(STORYBOOK_ENTRY);
 
   const args = process.argv.slice(2);
   const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';

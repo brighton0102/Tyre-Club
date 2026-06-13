@@ -1,15 +1,15 @@
 import { ReactNode } from 'react';
 import { View } from 'react-native';
 
-import { Text } from '@/shared/components/atoms/text';
+import { Text } from '@/shared/components/primitives/text';
 import { typographyClasses } from '@/shared/theme';
 
-type HeaderProps = {
+type ScreenHeaderProps = {
   title: string;
   rightAction?: ReactNode;
 };
 
-export function Header({ title, rightAction }: HeaderProps) {
+export function ScreenHeader({ title, rightAction }: ScreenHeaderProps) {
   return (
     <View className="mb-sp4 flex-row items-center justify-between">
       <Text className={`${typographyClasses.h1} flex-1`}>{title}</Text>

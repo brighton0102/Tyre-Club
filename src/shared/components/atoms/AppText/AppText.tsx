@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Text } from '@/shared/components/atoms/text';
+import { Text } from '@/shared/components/primitives/text';
 import { typographyClasses, type TypographyVariant } from '@/shared/theme';
 
 type AppTextVariant = TypographyVariant | 'title';

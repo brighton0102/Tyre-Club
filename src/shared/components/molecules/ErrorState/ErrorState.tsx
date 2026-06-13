@@ -1,9 +1,9 @@
-import { Center } from '@/shared/components/atoms/center';
-import { VStack } from '@/shared/components/atoms/vstack';
+import { Center } from '@/shared/components/primitives/center';
+import { VStack } from '@/shared/components/primitives/vstack';
 import { spacingClasses } from '@/shared/theme';
 
-import { AppButton } from '../AppButton';
-import { AppText } from '../AppText';
+import { AppButton } from '../../atoms/AppButton';
+import { AppText } from '../../atoms/AppText';
 
 type ErrorStateProps = {
   message: string;

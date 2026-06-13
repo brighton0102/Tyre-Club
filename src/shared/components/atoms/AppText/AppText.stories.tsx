@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { View } from 'react-native';
 
-import { VStack } from '@/shared/components/atoms/vstack';
+import { Stack } from '../../layouts/Stack';
 
 import { AppText } from './AppText';
 
 const meta = {
-  title: 'Design System/Molecules/AppText',
+  title: 'Design System/Atoms/AppText',
   component: AppText,
   decorators: [
     (Story) => (
@@ -56,7 +56,7 @@ export const Mono: Story = {
 export const AllVariants: Story = {
   args: { children: 'Preview' },
   render: () => (
-    <VStack space="sm">
+    <Stack space="sm">
       <AppText variant="display">Display</AppText>
       <AppText variant="h1">Heading 1</AppText>
       <AppText variant="h2">Heading 2</AppText>
@@ -65,6 +65,6 @@ export const AllVariants: Story = {
       <AppText variant="caption">Caption</AppText>
       <AppText variant="label">Label</AppText>
       <AppText variant="mono">Mono</AppText>
-    </VStack>
+    </Stack>
   ),
 };

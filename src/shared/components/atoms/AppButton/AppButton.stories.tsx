@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { AppButton } from './AppButton';
 
 const meta = {
-  title: 'Design System/Molecules/AppButton',
+  title: 'Design System/Atoms/AppButton',
   component: AppButton,
   decorators: [
     (Story) => (
