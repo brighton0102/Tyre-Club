@@ -7,6 +7,18 @@ import "@storybook/addon-ondevice-actions/register";
 const normalizedStories = [
   {
     titlePrefix: "",
+    directory: "./src/shared/components/primitives",
+    files: "**/*.stories.?(ts|tsx|js|jsx)",
+    importPathMatcher: /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/,
+    // @ts-ignore
+    req: require.context(
+      '../src/shared/components/primitives',
+      true,
+      /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/
+    ),
+  },
+  {
+    titlePrefix: "",
     directory: "./src/shared/components/atoms",
     files: "**/*.stories.?(ts|tsx|js|jsx)",
     importPathMatcher: /^\.(?:(?:^|[\\/]|(?:(?:(?!(?:^|[\\/])\.).)*?)[\\/])(?!\.)(?=.)[^\\/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/,

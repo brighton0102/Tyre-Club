@@ -25,7 +25,7 @@ prompts.spinner = () => ({
 prompts.confirm = async () => true;
 
 const { config } = require('gluestack-ui/dist/config');
-config.writableComponentsPath = 'src/components/ui';
+config.writableComponentsPath = 'src/shared/components/primitives';
 config.packageManager = 'npm';
 
 const { componentAdder } = require('gluestack-ui/dist/util/add');

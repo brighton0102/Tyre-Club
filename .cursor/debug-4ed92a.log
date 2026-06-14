@@ -1,0 +1,1 @@
+{"sessionId":"4ed92a","runId":"pre-start","hypothesisId":"A","location":"scripts/start-storybook.cjs:logDependencyDiagnostics","message":"Storybook startup dependency check","data":{"svgResolved":"C:\\Users\\Tanatswa\\Documents\\tire-club\\node_modules\\react-native-svg\\lib\\commonjs\\index.js","svgError":null,"svgExists":true,"nodeModulesExists":true},"timestamp":1781442971076}
