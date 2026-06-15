@@ -2,4 +2,4 @@
 
 declare module '*.css';
 
-declare var global: typeof globalThis;
+declare let global: typeof globalThis;

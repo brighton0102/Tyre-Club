@@ -39,7 +39,7 @@ function logDependencyDiagnostics() {
       svgError,
       svgExists: svgResolved ? fs.existsSync(svgResolved) : false,
       nodeModulesExists: fs.existsSync(
-        path.join(__dirname, '..', 'node_modules', 'react-native-svg', 'package.json')
+        path.join(__dirname, '..', 'node_modules', 'react-native-svg', 'package.json'),
       ),
     },
     timestamp: Date.now(),
